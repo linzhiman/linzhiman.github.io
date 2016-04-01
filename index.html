@@ -26,12 +26,17 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="linzhimangithubio" class="anchor" href="#linzhimangithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>linzhiman.github.io</h1>
-
-<p>test</p>
-      </section>
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                
+                <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 
     <!-- FOOTER  -->

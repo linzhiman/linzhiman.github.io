@@ -1,3 +1,0 @@
-# linzhiman.github.io
-
-test
