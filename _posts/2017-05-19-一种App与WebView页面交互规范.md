@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 一种移动平台设置HOSTS的解决方案
+title: 一种App与WebView页面交互规范
 ---
 # {{ page.title }}
 
