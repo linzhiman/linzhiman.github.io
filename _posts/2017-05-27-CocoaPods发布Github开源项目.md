@@ -14,10 +14,10 @@
 
 以下为我的.podspec文件，项目提供所有源码，且没有资源文件：  
 
-    Pod::Spec.new do |s|  
-      s.name         = "AppTemplateLib"  
-      s.version      = "0.0.2"  
-      s.summary      = "AppTemplateLib for quick start."  
+    Pod::Spec.new do |s|  
+      s.name         = "AppTemplateLib"  
+      s.version      = "0.0.2"  
+      s.summary      = "AppTemplateLib for quick start."  
       s.homepage     = "https://github.com/linzhiman/AppTemplateLib"  
       s.license      = "MIT"  
       s.author             = { "linzhiman" => "154298785@qq.com" }  
