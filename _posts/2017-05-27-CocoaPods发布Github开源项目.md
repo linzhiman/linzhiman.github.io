@@ -5,7 +5,7 @@
 
 2、创建.podspec文件。
 
-打开终端，cd到工程根目录下，执行 pod spec create NAME
+打开终端，cd到工程根目录下，执行 pod spec create NAME   
 
 pod spec create AppTemplateLib
 
@@ -55,7 +55,7 @@ end
 
 pod spec lint AppTemplateLib.podspec
 
-
+![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1705/CocoaPods发布Github开源项目-1.jpg?raw=true)
 
 3、发布。
 
@@ -67,9 +67,9 @@ pod trunk register 154298785@qq.com linzhiman
 
 后面的邮件地址和用户名，修改为自己，执行完命令会收到一封验证邮件，需要打开验证一下。
 
+![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1705/CocoaPods发布Github开源项目-2.jpg?raw=true)
 
-
-
+![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1705/CocoaPods发布Github开源项目-3.jpg?raw=true)
 
 接着，发布，在.podspec目录中执行以下命令：
 
@@ -79,7 +79,7 @@ pod trunk push
 
 pod search AppTemplateLib
 
-
+![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1705/CocoaPods发布Github开源项目-4.jpg?raw=true)
 
 至此，所有流程全部完成！大家都可以pod install了。
 
