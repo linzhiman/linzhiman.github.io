@@ -7,7 +7,7 @@
 
 打开终端，cd到工程根目录下，执行 pod spec create NAME  
 
-    pod spec create AppTemplateLib
+    pod spec create AppTemplateLib
 
 以上命令会生成一个AppTemplateLib.podspec文件。该文件描述了项目及作者信息，源码/库/资源，以及依赖的系统库/第三方库等配置信息。
 打开文件查看，可以发现里面有相当完备的说明，根据说明修改相关配置信息。
