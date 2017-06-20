@@ -29,9 +29,86 @@ App需求多变，常常过一段时间产品+设计就来个大改版，原先�
 
 这里介绍一个自动添加ParentController的方法—通用容器类ATContainerViewController，附代码实现。
 
-![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1706/UIViewController自动容器-1.jpg?raw=true)
+    //
+    //  ATContainerViewController.h
+    //  AppTemplateLib
+    //
+    //  Created by linzhiman on 2017/6/19.
+    //  Copyright © 2017年 zhiniu. All rights reserved.
+    //
+    
+    #import <UIKit/UIKit.h>
+    
+    @protocol ATContainerViewControllerProtocol <NSObject>
+    + (id)at_createInstance;
+    @end
 
-![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1706/UIViewController自动容器-2.jpg?raw=true)
+    /**
+     Storyboard中指定UIViewController的ClassName为ATContainerViewController，并设置Restoration Id为ATContainer+目标controller类名，        目录类需实现ATContainerViewControllerProtocol，后续将调用at_createInstance方法创建目标实例，并addChildViewController/addSubView。
+     */
+    @interface ATContainerViewController : UIViewController
+    
+    @end
+
+
+    //
+    //  ATContainerViewController.m
+    //  AppTemplateLib
+    //
+    //  Created by linzhiman on 2017/6/19.
+    //  Copyright © 2017年 zhiniu. All rights reserved.
+    //
+
+    #import "ATContainerViewController.h"
+    #import "ATGlobalMacro.h"
+
+    ATConstStringDefine(ATContainer_Prefix, @"ATContainer+")
+
+    @interface ATContainerViewController ()
+
+    @property (nonatomic, strong) UIViewController<ATContainerViewControllerProtocol> *subViewController;
+
+    @end
+
+    @implementation ATContainerViewController
+
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        // Do any additional setup after loading the view.
+        
+        NSString *restorationIdentifier = self.restorationIdentifier;
+        if ([restorationIdentifier hasPrefix:ATContainer_Prefix]) {
+            NSString *className = [restorationIdentifier substringFromIndex:ATContainer_Prefix.length];
+            Class aClass = NSClassFromString(className);
+            if ([aClass conformsToProtocol:@protocol(ATContainerViewControllerProtocol) ]) {
+                id instance = [aClass at_createInstance];
+                if ([instance isKindOfClass:[UIViewController class]]) {
+                    _subViewController = instance;
+                    [self addChildViewController:_subViewController];
+                    _subViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+                    [self.view addSubview:_subViewController.view];
+                }
+            }
+        }
+    }
+
+    - (void)didReceiveMemoryWarning {
+        [super didReceiveMemoryWarning];
+        // Dispose of any resources that can be recreated.
+    }
+
+    /*
+    #pragma mark - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+    @end
+
 
 使用：
 1、在Storyboard中创建一个新的UIViewController，指定ClassName为ATContainerViewController，并设置Restoration Id为ATContainer+目标controller类名，如ATContainer+MyViewController。
