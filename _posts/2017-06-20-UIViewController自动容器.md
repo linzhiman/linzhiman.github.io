@@ -29,6 +29,7 @@ App需求多变，常常过一段时间产品+设计就来个大改版，原先�
 
 这里介绍一个自动添加ParentController的方法—通用容器类ATContainerViewController，附代码实现。
 
+
     //
     //  ATContainerViewController.h
     //  AppTemplateLib
@@ -44,7 +45,10 @@ App需求多变，常常过一段时间产品+设计就来个大改版，原先�
     @end
 
     /**
-     Storyboard中指定UIViewController的ClassName为ATContainerViewController，并设置Restoration Id为ATContainer+目标controller类名，        目录类需实现ATContainerViewControllerProtocol，后续将调用at_createInstance方法创建目标实例，并addChildViewController/addSubView。
+     Storyboard中指定UIViewController的ClassName为ATContainerViewController，
+     并设置Restoration Id为ATContainer+目标controller类名，
+     目录类需实现ATContainerViewControllerProtocol，
+     后续将调用at_createInstance方法创建目标实例，并addChildViewController/addSubView。
      */
     @interface ATContainerViewController : UIViewController
     
@@ -110,7 +114,9 @@ App需求多变，常常过一段时间产品+设计就来个大改版，原先�
     @end
 
 
+
 使用：
+
 1、在Storyboard中创建一个新的UIViewController，指定ClassName为ATContainerViewController，并设置Restoration Id为ATContainer+目标controller类名，如ATContainer+MyViewController。
 
 2、ATContainerViewController的viewDidLoad中解析Restoration Id，获取目标类名MyViewController。
