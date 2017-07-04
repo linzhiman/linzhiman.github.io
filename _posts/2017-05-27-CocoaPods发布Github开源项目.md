@@ -83,6 +83,14 @@
 
 至此，所有流程全部完成！大家都可以pod install了。
 
+---
+
+20170704更新:
+
+最近工作中在发布时，遇到一些问题，例如有些公司为了加快Github访问速度而做了镜像，但是镜像可能是每日一更新，可能造成发布podspec后，clone不到最新的，也就没法pod install了。提供一下解决方法，配置podfile时不直接使用pod 'AppTemplateLib', '= 0.0.1'这种直接依赖CocoaPods仓库的方式，而修改为pod 'AppTemplateLib', :podspec => 'https://github.com/linzhiman/AppTemplateLib/blob/master/AppTemplateLib.podspec?raw=1'
+
+---
+
 问答：
 1、修改了代码，需要更新怎么处理？
 答：在项目架构不变情况下，只需要在Github上用新版本打tag，然后修改.podspec中的s.version。如果新增了资源文件，依赖库则需要对应修改。然后重新push即可。s.version每次trunk push需要递增，重复的话将会失败。  
