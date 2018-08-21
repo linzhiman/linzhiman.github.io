@@ -31,7 +31,7 @@ title: iOS全屏幕适配方案-基于scale transform
 
 有一点需要特别注意，view宽度不再是屏幕宽度，也不固定为375，而是不同型号设备有不同值。
 
-具体实现可以参考一下代码：
+具体实现可以参考以下代码：
 
 ![image](https://github.com/linzhiman/linzhiman.github.io/blob/master/resource/1808/iOS全屏幕适配方案-基于scale-transform-2.png?raw=true)
 
