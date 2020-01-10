@@ -245,5 +245,11 @@ metamacro_argcount(a, b, c, d) 展开得到4
 #define AT_EVEN_ARGS(...) AT_EVEN_ARGS_(__VA_ARGS__)
 ```
 
+#### 5、参数变动时，所有订阅的地方都需要调整代码，怎么避免？
+
+自动生成数据模型，将所有参数作为模型的属性，Block类型修改为^(ATBNXXXObj * _Nonnull obj) {}
+
+具体实现这里就不赘述了，感兴趣的同学请查看代码。
+
 [-->完整源码传送门<--](https://github.com/linzhiman/ATKit/tree/master/ATKit/Utility/Notification)
 
