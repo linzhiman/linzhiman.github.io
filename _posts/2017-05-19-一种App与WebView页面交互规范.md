@@ -1,8 +1,7 @@
 ---
-layout: post
 title: 一种App与WebView页面交互规范
+date: 2017-05-19 18:00:00
 ---
-# {{ page.title }}
 
 为了加快业务需求的开发进度，技术选型上往往选择H5作为业务需求的承载，如此不可避免的需要支持App原生代码与页面JavaScript脚本的相互调用。
 
