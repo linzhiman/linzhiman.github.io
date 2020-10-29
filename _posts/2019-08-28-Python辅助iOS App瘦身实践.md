@@ -1,8 +1,7 @@
 ---
-layout: post
 title: Python辅助iOS App瘦身实践
+date: 2019-08-28 18:00:00
 ---
-# {{ page.title }}
 
 源码地址：https://github.com/linzhiman/ATKit
 
