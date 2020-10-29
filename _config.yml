@@ -1,7 +1,7 @@
 # ----------- CONFIGURABLE START -----------
 title:            "To be excellent"
 description:      "Such theme, very cool."
-url:              http://scribble.muan.co # Site url, without a slash at the end.
+url:              http://linzhiman.github.io # Site url, without a slash at the end.
 signoff:          "linzhiman" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
