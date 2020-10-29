@@ -6,9 +6,9 @@ title: Sublime Text使用技巧
 
 [下载传送门](http://www.sublimetext.com/3)
 
-##日志过滤分析
+## 日志过滤分析
 
-###基础版：
+### 基础版：
 
 	打开需要处理的文件，按【Ctrl + F】，输入目标文本，选择【Find All】，在文件中你会看到我们想选的内容被选中了
 
@@ -16,7 +16,7 @@ title: Sublime Text使用技巧
 
 	按【Ctrl + C】拷贝数据，最后新建文件粘贴数据，这样我们所需要的数据就被提取出来了
 
-###进阶版：
+### 进阶版：
 
 	安装插件管理器，【Tools】->【Install Package Control…】
 
@@ -26,7 +26,7 @@ title: Sublime Text使用技巧
 
 	在底部输入框输入目标文本即可
 
-##Markdown预览
+## Markdown预览
 
 	安装 MarkdownPreview 插件
 
