@@ -1,8 +1,7 @@
 ---
-layout: post
 title: UIViewController自动容器
+date: 2017-06-20 18:00:00
 ---
-# {{ page.title }}
 
 App需求多变，常常过一段时间产品+设计就来个大改版，原先设计好的UI结构很难适应。
 
