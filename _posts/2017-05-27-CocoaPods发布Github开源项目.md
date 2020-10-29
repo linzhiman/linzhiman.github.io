@@ -1,3 +1,8 @@
+---
+title: CocoaPods发布Github开源项目
+date: 2017-05-19 18:00:00
+---
+
 1、在Github上建好自己的开源项目。
 
 如我的项目AppTemplateLib。附地址 https://github.com/linzhiman/AppTemplateLib
