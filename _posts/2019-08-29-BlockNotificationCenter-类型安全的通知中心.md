@@ -1,8 +1,7 @@
 ---
-layout: post
 title: BlockNotificationCenter-类型安全的通知中心
+date: 2019-08-29 18:00:00
 ---
-# {{ page.title }}
 
 [-->完整源码传送门<--](https://github.com/linzhiman/ATKit/tree/master/ATKit/Utility/Notification)
 
