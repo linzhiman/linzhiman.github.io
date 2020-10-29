@@ -1,8 +1,7 @@
 ---
-layout: post
 title: iOS缓存库PINCache详解
+date: 2020-04-15 18:00:00
 ---
-# {{ page.title }}
 
 ### 简介
 
